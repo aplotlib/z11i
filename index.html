@@ -9,8 +9,9 @@
 </head>
 <body>
   <header>
-    <h1 style="color: red;">Classified: Top Secret - NOFORN</h1>
-    <h2>Project JOVE - Z11I Business Intelligence Program</h2>
+    <div class="top-secret-banner">Top Secret - NOFORN</div>
+    <h1>Project JOVE - Z11I</h1>
+    <h2>Business Intelligence Program</h2>
     <nav>
       <ul>
         <li><a href="#dashboard">Financial Dashboard</a></li>
@@ -37,14 +38,12 @@
 
     <section id="reports">
       <h2>Customizable Reports</h2>
-      <div>
+      <div class="report-controls">
         <label for="reportType">Select Report Type:</label>
         <select id="reportType">
           <option value="financial">Financial</option>
           <option value="operational">Operational</option>
         </select>
-      </div>
-      <div>
         <button id="generateReport">Generate Report</button>
       </div>
       <div id="reportOutput"></div>
@@ -52,10 +51,14 @@
 
     <section id="integration">
       <h2>Integration Details</h2>
-      <h3>LeafLink API</h3>
-      <p>Integration with LeafLink API for real-time data synchronization and inventory management.</p>
-      <h3>Metrc</h3>
-      <p>Integration with Metrc for compliance tracking and reporting.</p>
+      <div class="integration-detail">
+        <h3>LeafLink API</h3>
+        <p>Integration with LeafLink API for real-time data synchronization and inventory management.</p>
+      </div>
+      <div class="integration-detail">
+        <h3>Metrc</h3>
+        <p>Integration with Metrc for compliance tracking and reporting.</p>
+      </div>
     </section>
 
     <section id="analytics">
@@ -81,7 +84,7 @@
     </section>
   </main>
   <footer>
-    <p style="color: red;">Classified: Top Secret - NOFORN</p>
+    <p class="footer-top-secret">Top Secret - NOFORN</p>
     <p hidden>Cryptographic Riddle: Begin at the start of the stars, seek the first three letters, shift them forward by 13 places in the alphabet.</p>
   </footer>
 
