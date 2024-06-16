@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h1>Classified: Top Secret - NOFORN</h1>
+    <h1 style="color: red;">Classified: Top Secret - NOFORN</h1>
     <h2>Project JOVE - Z11I Business Intelligence Program</h2>
     <nav>
       <ul>
@@ -81,7 +81,7 @@
     </section>
   </main>
   <footer>
-    <p>Classified: Top Secret - NOFORN</p>
+    <p style="color: red;">Classified: Top Secret - NOFORN</p>
   </footer>
 
   <script>
@@ -113,12 +113,22 @@
           <h3>Financial Report</h3>
           <p>Revenue: $18,000</p>
           <p>Expenses: $7,000</p>
+          <h4>Statistical Analysis</h4>
+          <p>Average Monthly Revenue: $13,250</p>
+          <p>Revenue Standard Deviation: $4,847</p>
+          <h4>Predictive Analytics</h4>
+          <p>Projected Revenue Next Quarter: $52,000</p>
         `;
       } else if (reportType === 'operational') {
         reportData = `
           <h3>Operational Report</h3>
           <p>Units Produced: 1,200</p>
           <p>Units Sold: 1,000</p>
+          <h4>Statistical Analysis</h4>
+          <p>Production Efficiency: 83.33%</p>
+          <p>Sales Conversion Rate: 83.33%</p>
+          <h4>Predictive Analytics</h4>
+          <p>Projected Units Sold Next Quarter: 3,600</p>
         `;
       }
 
