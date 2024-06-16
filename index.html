@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Z11I Dashboard</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -18,25 +19,70 @@
       </ul>
     </nav>
   </header>
-  <aside>
-    <ul>
-      <li><a href="#financial">Financial</a></li>
-      <li><a href="#operational">Operational</a></li>
-      <!-- Additional categories -->
-    </ul>
-  </aside>
   <main>
-    <div class="widget-grid">
-      <div class="widget">Widget 1</div>
-      <div class="widget">Widget 2</div>
-      <div class="widget">Widget 3</div>
-      <div class="widget">Widget 4</div>
-      <div class="widget">Widget 5</div>
-      <div class="widget">Widget 6</div>
-      <div class="widget">Widget 7</div>
-      <div class="widget">Widget 8</div>
-    </div>
+    <section id="dashboards">
+      <h2>Financial Dashboard</h2>
+      <div class="widget-grid">
+        <canvas id="revenueChart"></canvas>
+      </div>
+    </section>
+
+    <section id="reports">
+      <h2>Customizable Reports</h2>
+      <div>
+        <label for="reportType">Select Report Type:</label>
+        <select id="reportType">
+          <option value="financial">Financial</option>
+          <option value="operational">Operational</option>
+        </select>
+      </div>
+      <div>
+        <button id="generateReport">Generate Report</button>
+      </div>
+      <div id="reportOutput"></div>
+    </section>
   </main>
-  <script src="scripts.js"></script>
+
+  <script>
+    // Chart.js financial dashboard
+    document.addEventListener('DOMContentLoaded', function () {
+      const ctx = document.getElementById('revenueChart').getContext('2d');
+      const revenueChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['January', 'February', 'March', 'April'],
+          datasets: [{
+            label: 'Revenue',
+            data: [12000, 15000, 8000, 18000],
+            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            borderWidth: 1
+          }]
+        }
+      });
+    });
+
+    // Simple customizable reports demo
+    document.getElementById('generateReport').addEventListener('click', function () {
+      const reportType = document.getElementById('reportType').value;
+      let reportData = '';
+
+      if (reportType === 'financial') {
+        reportData = `
+          <h3>Financial Report</h3>
+          <p>Revenue: $18,000</p>
+          <p>Expenses: $7,000</p>
+        `;
+      } else if (reportType === 'operational') {
+        reportData = `
+          <h3>Operational Report</h3>
+          <p>Units Produced: 1,200</p>
+          <p>Units Sold: 1,000</p>
+        `;
+      }
+
+      document.getElementById('reportOutput').innerHTML = reportData;
+    });
+  </script>
 </body>
 </html>
