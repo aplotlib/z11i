@@ -85,4 +85,168 @@
     });
   </script>
 </body>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z11i 2.0</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #003366;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #003366;
+      color: #FFD700;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    .widget-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .widget-grid canvas {
+      background-color: #FFFFFF;
+      border: 1px solid #D3D3D3;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    label, select, button {
+      display: block;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Existing Webpage Content -->
+  <header>
+    <div class="logo">Existing Logo</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <h1>Welcome to Our Website</h1>
+      <p>This is the home section of the existing webpage.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Information about the company.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>Details about the services offered.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Contact information and form.</p>
+    </section>
+
+    <!-- New Dashboard and Report Section -->
+    <section id="dashboards">
+      <h2>Financial Dashboard</h2>
+      <div class="widget-grid">
+        <canvas id="revenueChart"></canvas>
+      </div>
+    </section>
+
+    <section id="reports">
+      <h2>Customizable Reports</h2>
+      <div>
+        <label for="reportType">Select Report Type:</label>
+        <select id="reportType">
+          <option value="financial">Financial</option>
+          <option value="operational">Operational</option>
+        </select>
+      </div>
+      <div>
+        <button id="generateReport">Generate Report</button>
+      </div>
+      <div id="reportOutput"></div>
+    </section>
+  </main>
+
+  <script>
+    // Chart.js financial dashboard
+    document.addEventListener('DOMContentLoaded', function () {
+      const ctx = document.getElementById('revenueChart').getContext('2d');
+      const revenueChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['January', 'February', 'March', 'April'],
+          datasets: [{
+            label: 'Revenue',
+            data: [12000, 15000, 8000, 18000],
+            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            borderWidth: 1
+          }]
+        }
+      });
+    });
+
+    // Simple customizable reports demo
+    document.getElementById('generateReport').addEventListener('click', function () {
+      const reportType = document.getElementById('reportType').value;
+      let reportData = '';
+
+      if (reportType === 'financial') {
+        reportData = `
+          <h3>Financial Report</h3>
+          <p>Revenue: $18,000</p>
+          <p>Expenses: $7,000</p>
+        `;
+      } else if (reportType === 'operational') {
+        reportData = `
+          <h3>Operational Report</h3>
+          <p>Units Produced: 1,200</p>
+          <p>Units Sold: 1,000</p>
+        `;
+      }
+
+      document.getElementById('reportOutput').innerHTML = reportData;
+    });
+  </script>
+</body>
 </html>
