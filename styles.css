@@ -1,4 +1,4 @@
- body {
+body {
   font-family: 'Courier New', Courier, monospace;
   color: #D3D3D3;
   margin: 0;
@@ -131,4 +131,26 @@ select {
   border: 1px solid #FFD700;
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  color: #FFD700;
+  border-bottom: 1px solid red;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+#reportOutput h4 {
+  color: #FFD700;
+  margin-top: 1rem;
+  border-bottom: 1px solid red;
+  padding-bottom: 0.5rem;
+}
+
+#reportOutput p {
+  margin: 0.5rem 0;
 }
