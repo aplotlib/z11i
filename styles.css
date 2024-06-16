@@ -32,9 +32,9 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 nav a {
@@ -97,8 +97,9 @@ footer {
 
 .report-controls {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background-color: #2E2E2E;
   padding: 1rem;
   border-radius: 5px;
@@ -158,6 +159,9 @@ h3 {
 @media (min-width: 768px) {
   .widget-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .report-controls {
+    flex-direction: row;
   }
 }
 
