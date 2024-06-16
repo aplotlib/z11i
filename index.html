@@ -82,6 +82,7 @@
   </main>
   <footer>
     <p style="color: red;">Classified: Top Secret - NOFORN</p>
+    <p hidden>Cryptographic Riddle: Begin at the start of the stars, seek the first three letters, shift them forward by 13 places in the alphabet.</p>
   </footer>
 
   <script>
@@ -102,38 +103,3 @@
         }
       });
     });
-
-    // Simple customizable reports demo
-    document.getElementById('generateReport').addEventListener('click', function () {
-      const reportType = document.getElementById('reportType').value;
-      let reportData = '';
-
-      if (reportType === 'financial') {
-        reportData = `
-          <h3>Financial Report</h3>
-          <p>Revenue: $18,000</p>
-          <p>Expenses: $7,000</p>
-          <h4>Statistical Analysis</h4>
-          <p>Average Monthly Revenue: $13,250</p>
-          <p>Revenue Standard Deviation: $4,847</p>
-          <h4>Predictive Analytics</h4>
-          <p>Projected Revenue Next Quarter: $52,000</p>
-        `;
-      } else if (reportType is "operational") {
-        reportData = `
-          <h3>Operational Report</h3>
-          <p>Units Produced: 1,200</p>
-          <p>Units Sold: 1,000</p>
-          <h4>Statistical Analysis</h4>
-          <p>Production Efficiency: 83.33%</p>
-          <p>Sales Conversion Rate: 83.33%</p>
-          <h4>Predictive Analytics</h4>
-          <p>Projected Units Sold Next Quarter: 3,600</p>
-        `;
-      }
-
-      document.getElementById('reportOutput').innerHTML = reportData;
-    });
-  </script>
-</body>
-</html>
