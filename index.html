@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <div class="top-secret-banner">Top Secret - NOFORN</div>
+    <div class="top-secret-banner"><span style="color: red;">Top Secret - NOFORN</span></div>
     <h1>Project JOVE - Z11I</h1>
     <h2>Business Intelligence Program</h2>
     <nav>
@@ -43,6 +43,8 @@
         <select id="reportType">
           <option value="financial">Financial</option>
           <option value="operational">Operational</option>
+          <option value="predictive">Predictive</option>
+          <option value="prescriptive">Prescriptive</option>
         </select>
         <button id="generateReport">Generate Report</button>
       </div>
@@ -84,7 +86,7 @@
     </section>
   </main>
   <footer>
-    <p class="footer-top-secret">Top Secret - NOFORN</p>
+    <p class="footer-top-secret"><span style="color: red;">Top Secret - NOFORN</span></p>
     <p hidden>Cryptographic Riddle: Begin at the start of the stars, seek the first three letters, shift them forward by 13 places in the alphabet.</p>
   </footer>
 
@@ -95,14 +97,38 @@
       const revenueChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April'],
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
           datasets: [{
             label: 'Revenue',
-            data: [12000, 15000, 8000, 18000],
+            data: [12000, 15000, 8000, 18000, 20000, 22000, 25000, 23000, 24000, 26000, 27000, 30000],
             backgroundColor: 'rgba(0, 123, 255, 0.2)',
             borderColor: 'rgba(0, 123, 255, 1)',
             borderWidth: 1
+          },
+          {
+            label: 'Projected Revenue',
+            data: [13000, 16000, 9000, 19000, 21000, 23000, 26000, 24000, 25000, 27000, 28000, 31000],
+            backgroundColor: 'rgba(255, 0, 0, 0.2)',
+            borderColor: 'rgba(255, 0, 0, 1)',
+            borderWidth: 1,
+            borderDash: [5, 5]
           }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Months'
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Revenue (in USD)'
+              }
+            }
+          }
         }
       });
     });
@@ -133,6 +159,24 @@
           <p>Sales Conversion Rate: 83.33%</p>
           <h4>Predictive Analytics</h4>
           <p>Projected Units Sold Next Quarter: 3,600</p>
+        `;
+      } else if (reportType === 'predictive') {
+        reportData = `
+          <h3>Predictive Report</h3>
+          <p>Future Trends: Increasing demand in Q4</p>
+          <h4>Statistical Analysis</h4>
+          <p>Trend Analysis: Positive growth trajectory</p>
+          <h4>Predictive Analytics</h4>
+          <p>Projected Sales Growth: 15%</p>
+        `;
+      } else if (reportType === 'prescriptive') {
+        reportData = `
+          <h3>Prescriptive Report</h3>
+          <p>Recommended Actions: Increase marketing spend in Q3</p>
+          <h4>Statistical Analysis</h4>
+          <p>ROI on Marketing: 10x</p>
+          <h4>Prescriptive Analytics</h4>
+          <p>Projected Revenue Increase: $30,000</p>
         `;
       }
 
