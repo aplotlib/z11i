@@ -3,129 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Z11I Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <header>
-    <div class="logo">General Wealth Co.</div>
-    <nav>
-      <ul>
-        <li><a href="#dashboards">Dashboards</a></li>
-        <li><a href="#reports">Reports</a></li>
-        <li><a href="#compliance">Compliance</a></li>
-        <li><a href="#settings">Settings</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="dashboards">
-      <h2>Financial Dashboard</h2>
-      <div class="widget-grid">
-        <canvas id="revenueChart"></canvas>
-      </div>
-    </section>
-
-    <section id="reports">
-      <h2>Customizable Reports</h2>
-      <div>
-        <label for="reportType">Select Report Type:</label>
-        <select id="reportType">
-          <option value="financial">Financial</option>
-          <option value="operational">Operational</option>
-        </select>
-      </div>
-      <div>
-        <button id="generateReport">Generate Report</button>
-      </div>
-      <div id="reportOutput"></div>
-    </section>
-  </main>
-
-  <script>
-    // Chart.js financial dashboard
-    document.addEventListener('DOMContentLoaded', function () {
-      const ctx = document.getElementById('revenueChart').getContext('2d');
-      const revenueChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['January', 'February', 'March', 'April'],
-          datasets: [{
-            label: 'Revenue',
-            data: [12000, 15000, 8000, 18000],
-            backgroundColor: 'rgba(0, 123, 255, 0.2)',
-            borderColor: 'rgba(0, 123, 255, 1)',
-            borderWidth: 1
-          }]
-        }
-      });
-    });
-
-    // Simple customizable reports demo
-    document.getElementById('generateReport').addEventListener('click', function () {
-      const reportType = document.getElementById('reportType').value;
-      let reportData = '';
-
-      if (reportType === 'financial') {
-        reportData = `
-          <h3>Financial Report</h3>
-          <p>Revenue: $18,000</p>
-          <p>Expenses: $7,000</p>
-        `;
-      } else if (reportType === 'operational') {
-        reportData = `
-          <h3>Operational Report</h3>
-          <p>Units Produced: 1,200</p>
-          <p>Units Sold: 1,000</p>
-        `;
-      }
-
-      document.getElementById('reportOutput').innerHTML = reportData;
-    });
-  </script>
-</body>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Z11i 2.0</title>
+  <title>General Wealth Co. Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      color: #003366;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
     }
 
     header {
       background-color: #003366;
       color: #FFD700;
-      padding: 1rem;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
+      font-weight: bold;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
 
     nav a {
       color: #FFFFFF;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFD700;
     }
 
     main {
-      padding: 1rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
 
     .widget-grid {
@@ -137,61 +77,57 @@
     .widget-grid canvas {
       background-color: #FFFFFF;
       border: 1px solid #D3D3D3;
-    }
-
-    section {
-      margin-bottom: 2rem;
+      padding: 1rem;
+      border-radius: 8px;
     }
 
     label, select, button {
       display: block;
       margin-top: 1rem;
     }
+
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #003366;
+      color: #FFD700;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #002244;
+    }
   </style>
 </head>
 <body>
-  <!-- Existing Webpage Content -->
   <header>
-    <div class="logo">Existing Logo</div>
+    <div class="logo">General Wealth Co.</div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#dashboards">Dashboards</a></li>
+        <li><a href="#reports">Reports</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section id="home">
-      <h1>Welcome to Our Website</h1>
-      <p>This is the home section of the existing webpage.</p>
-    </section>
+    <div class="section" id="home">
+      <h2>Welcome to General Wealth Co.</h2>
+      <p>This is the home section of the General Wealth Co. dashboard page. Learn about our offerings and insights.</p>
+    </div>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Information about the company.</p>
-    </section>
-
-    <section id="services">
-      <h2>Our Services</h2>
-      <p>Details about the services offered.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Contact information and form.</p>
-    </section>
-
-    <!-- New Dashboard and Report Section -->
-    <section id="dashboards">
+    <div class="section" id="dashboards">
       <h2>Financial Dashboard</h2>
       <div class="widget-grid">
         <canvas id="revenueChart"></canvas>
       </div>
-    </section>
+    </div>
 
-    <section id="reports">
+    <div class="section" id="reports">
       <h2>Customizable Reports</h2>
       <div>
         <label for="reportType">Select Report Type:</label>
@@ -204,7 +140,7 @@
         <button id="generateReport">Generate Report</button>
       </div>
       <div id="reportOutput"></div>
-    </section>
+    </div>
   </main>
 
   <script>
@@ -249,4 +185,4 @@
     });
   </script>
 </body>
-</html> 
+</html>
