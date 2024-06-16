@@ -1,9 +1,17 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   color: #003366;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #1A1A1A;
+}
+
+.top-secret-banner {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 header {
@@ -11,6 +19,7 @@ header {
   color: #FFD700;
   padding: 1rem;
   text-align: center;
+  border-bottom: 3px solid red;
 }
 
 header h1, header h2 {
@@ -28,7 +37,7 @@ nav ul {
 }
 
 nav a {
-  color: #FFFFFF;
+  color: #FFD700;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border: 1px solid #FFD700;
@@ -42,11 +51,12 @@ nav a:hover {
 
 main {
   padding: 2rem;
+  color: #FFFFFF;
 }
 
 main h2 {
-  color: #003366;
-  border-bottom: 2px solid #FFD700;
+  color: #FFD700;
+  border-bottom: 2px solid red;
   padding-bottom: 0.5rem;
 }
 
@@ -58,8 +68,8 @@ main h2 {
 }
 
 .widget-grid canvas {
-  background-color: #FFFFFF;
-  border: 1px solid #D3D3D3;
+  background-color: #1A1A1A;
+  border: 1px solid #FFD700;
   padding: 1rem;
 }
 
@@ -71,4 +81,9 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+.footer-top-secret {
+  color: red;
+  font-weight: bold;
 }
