@@ -1,9 +1,9 @@
 body {
   font-family: 'Courier New', Courier, monospace;
-  color: #003366;
+  color: #D3D3D3;
   margin: 0;
   padding: 0;
-  background-color: #1A1A1A;
+  background-color: #0A0A0A;
 }
 
 .top-secret-banner {
@@ -15,11 +15,12 @@ body {
 }
 
 header {
-  background-color: #003366;
+  background-color: #2E2E2E;
   color: #FFD700;
   padding: 1rem;
   text-align: center;
   border-bottom: 3px solid red;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
 header h1, header h2 {
@@ -42,11 +43,12 @@ nav a {
   padding: 0.5rem 1rem;
   border: 1px solid #FFD700;
   border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
   background-color: #FFD700;
-  color: #003366;
+  color: #2E2E2E;
 }
 
 main {
@@ -68,22 +70,68 @@ main h2 {
 }
 
 .widget-grid canvas {
-  background-color: #1A1A1A;
+  background-color: #0A0A0A;
   border: 1px solid #FFD700;
   padding: 1rem;
 }
 
 footer {
-  background-color: #003366;
+  background-color: #2E2E2E;
   color: #FFD700;
   text-align: center;
   padding: 1rem;
   position: fixed;
   width: 100%;
   bottom: 0;
+  box-shadow: 0 -4px 2px -2px gray;
 }
 
 .footer-top-secret {
   color: red;
   font-weight: bold;
+}
+
+.integration-detail {
+  background-color: #1E1E1E;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.report-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E1E1E;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #FFD700;
+  color: #2E2E2E;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #2E2E2E;
+  color: #FFD700;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+select {
+  background-color: #2E2E2E;
+  color: #FFD700;
+  border: 1px solid #FFD700;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
