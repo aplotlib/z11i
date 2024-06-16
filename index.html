@@ -23,7 +23,8 @@
       </ul>
     </nav>
   </header>
-  <main>
+
+  <main id="mainContent" style="display: none;">
     <section id="intro">
       <h3>Welcome to Project JOVE (Z11I)</h3>
       <p>This is a top-secret project under General Wealth Co. integrating advanced business intelligence solutions for the cannabis industry.</p>
@@ -85,12 +86,34 @@
       <p>Contact us at <a href="mailto:contact@joveintelligence.com">contact@joveintelligence.com</a> for more information.</p>
     </section>
   </main>
+
   <footer>
     <p class="footer-top-secret">Top Secret - NOFORN</p>
     <p hidden>Cryptographic Riddle: Begin at the start of the stars, seek the first three letters, shift them forward by 13 places in the alphabet.</p>
   </footer>
 
+  <div id="accessRiddle">
+    <h2>Access Restricted</h2>
+    <p>Solve the riddle to gain access:</p>
+    <p><em>"I am the largest, I am the king, my atomic number is a common thing. Seek me out and you shall see, the answer lies within me."</em></p>
+    <label for="riddleAnswer">Enter your answer:</label>
+    <input type="text" id="riddleAnswer">
+    <button id="submitRiddle">Submit</button>
+    <p id="riddleFeedback" style="color: red;"></p>
+  </div>
+
   <script>
+    document.getElementById('submitRiddle').addEventListener('click', function () {
+      const answer = document.getElementById('riddleAnswer').value.toLowerCase();
+      const correctAnswer = 'hydrogen';
+      if (answer === correctAnswer) {
+        document.getElementById('mainContent').style.display = 'block';
+        document.getElementById('accessRiddle').style.display = 'none';
+      } else {
+        document.getElementById('riddleFeedback').innerText = 'Incorrect answer. Try again.';
+      }
+    });
+
     // Chart.js financial dashboard
     document.addEventListener('DOMContentLoaded', function () {
       const ctx = document.getElementById('revenueChart').getContext('2d');
@@ -173,15 +196,4 @@
         reportData = `
           <h3>Prescriptive Report</h3>
           <p>Recommended Actions: Increase marketing spend in Q3</p>
-          <h4>Statistical Analysis</h4>
-          <p>ROI on Marketing: 10x</p>
-          <h4>Prescriptive Analytics</h4>
-          <p>Projected Revenue Increase: $30,000</p>
-        `;
-      }
-
-      document.getElementById('reportOutput').innerHTML = reportData;
-    });
-  </script>
-</body>
-</html>
+          <h4>Statistical
