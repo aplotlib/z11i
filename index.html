@@ -3,131 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>General Wealth Co. Dashboard</title>
+  <title>Project JOVE - Z11I</title>
+  <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
-    }
-
-    header {
-      background-color: #003366;
-      color: #FFD700;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .logo {
-      font-size: 1.75rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      color: #FFFFFF;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #FFD700;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section {
-      background: #fff;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #003366;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .widget-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .widget-grid canvas {
-      background-color: #FFFFFF;
-      border: 1px solid #D3D3D3;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    label, select, button {
-      display: block;
-      margin-top: 1rem;
-    }
-
-    button {
-      padding: 0.5rem 1rem;
-      background-color: #003366;
-      color: #FFD700;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #002244;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <div class="logo">General Wealth Co.</div>
+    <h1>Classified: Top Secret</h1>
+    <h2>Project JOVE - Z11I Business Intelligence Program</h2>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#dashboards">Dashboards</a></li>
-        <li><a href="#reports">Reports</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#dashboard">Financial Dashboard</a></li>
+        <li><a href="#reports">Customizable Reports</a></li>
+        <li><a href="#integration">Integration Details</a></li>
+        <li><a href="#analytics">Predictive & Prescriptive Analytics</a></li>
+        <li><a href="#financial">Financial Analysis</a></li>
+        <li><a href="#developers">Developers</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <div class="section" id="home">
-      <h2>Welcome to General Wealth Co.</h2>
-      <p>This is the home section of the General Wealth Co. dashboard page. Learn about our offerings and insights.</p>
-    </div>
+    <section id="intro">
+      <h3>Welcome to Project JOVE (Z11I)</h3>
+      <p>This is a top-secret project integrating advanced business intelligence solutions for the cannabis industry.</p>
+    </section>
 
-    <div class="section" id="dashboards">
+    <section id="dashboard">
       <h2>Financial Dashboard</h2>
       <div class="widget-grid">
         <canvas id="revenueChart"></canvas>
       </div>
-    </div>
+    </section>
 
-    <div class="section" id="reports">
+    <section id="reports">
       <h2>Customizable Reports</h2>
       <div>
         <label for="reportType">Select Report Type:</label>
@@ -140,8 +48,41 @@
         <button id="generateReport">Generate Report</button>
       </div>
       <div id="reportOutput"></div>
-    </div>
+    </section>
+
+    <section id="integration">
+      <h2>Integration Details</h2>
+      <h3>LeafLink API</h3>
+      <p>Integration with LeafLink API for real-time data synchronization and inventory management.</p>
+      <h3>Metrc</h3>
+      <p>Integration with Metrc for compliance tracking and reporting.</p>
+    </section>
+
+    <section id="analytics">
+      <h2>Predictive & Prescriptive Analytics</h2>
+      <p>Utilizing advanced algorithms to provide predictive insights and prescriptive recommendations for business operations.</p>
+    </section>
+
+    <section id="financial">
+      <h2>Financial Analysis</h2>
+      <p>Comprehensive financial analysis including revenue, expenses, profit margins, and other key performance indicators (KPIs).</p>
+    </section>
+
+    <section id="developers">
+      <h2>Developers</h2>
+      <p>We are seeking developers for paid and unpaid development work. Below are the current projects we need help with:</p>
+      <ul>
+        <li>LeafLink API Integration</li>
+        <li>Metrc Compliance Reporting</li>
+        <li>Predictive Analytics Algorithms</li>
+        <li>Customizable Report Generation</li>
+      </ul>
+      <p>Contact us at <a href="mailto:contact@joveintelligence.com">contact@joveintelligence.com</a> for more information.</p>
+    </section>
   </main>
+  <footer>
+    <p>Classified: Top Secret</p>
+  </footer>
 
   <script>
     // Chart.js financial dashboard
