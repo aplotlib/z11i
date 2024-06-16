@@ -3,19 +3,19 @@ body {
   color: #D3D3D3;
   margin: 0;
   padding: 0;
-  background-color: #0A0A0A;
+  background-color: #1A1A1A;
 }
 
 .top-secret-banner {
   background-color: red;
-  color: white;
+  color: black;
   padding: 0.5rem;
   text-align: center;
   font-weight: bold;
 }
 
 header {
-  background-color: #2E2E2E;
+  background-color: #333;
   color: #FFD700;
   padding: 1rem;
   text-align: center;
@@ -48,7 +48,7 @@ nav a {
 
 nav a:hover {
   background-color: #FFD700;
-  color: #2E2E2E;
+  color: #333;
 }
 
 main {
@@ -70,13 +70,13 @@ main h2 {
 }
 
 .widget-grid canvas {
-  background-color: #0A0A0A;
+  background-color: #1A1A1A;
   border: 1px solid #FFD700;
   padding: 1rem;
 }
 
 footer {
-  background-color: #2E2E2E;
+  background-color: #333;
   color: #FFD700;
   text-align: center;
   padding: 1rem;
@@ -89,7 +89,7 @@ footer {
 }
 
 .integration-detail {
-  background-color: #1E1E1E;
+  background-color: #2E2E2E;
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -99,7 +99,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1E1E1E;
+  background-color: #2E2E2E;
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -107,7 +107,7 @@ footer {
 
 button {
   background-color: #FFD700;
-  color: #2E2E2E;
+  color: #333;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -116,7 +116,7 @@ button {
 }
 
 button:hover {
-  background-color: #2E2E2E;
+  background-color: #333;
   color: #FFD700;
 }
 
@@ -126,7 +126,7 @@ label {
 }
 
 select {
-  background-color: #2E2E2E;
+  background-color: #333;
   color: #FFD700;
   border: 1px solid #FFD700;
   padding: 0.5rem;
@@ -153,4 +153,29 @@ h3 {
 
 #reportOutput p {
   margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .widget-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .widget-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+section nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+section nav a {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
