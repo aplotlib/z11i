@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <div class="top-secret-banner"><span style="color: red;">Top Secret - NOFORN</span></div>
+    <div class="top-secret-banner"><span>Top Secret - NOFORN</span></div>
     <h1>Project JOVE - Z11I</h1>
     <h2>Business Intelligence Program</h2>
     <nav>
@@ -23,22 +23,12 @@
       </ul>
     </nav>
   </header>
-
+  
   <div id="disclaimer">
     <p>Disclaimer: This is a demo site for Project JOVE - Z11I. It is not an actual classified site.</p>
   </div>
 
-  <div id="accessRiddle">
-    <h2>Access Restricted</h2>
-    <p>Solve the riddle to gain access:</p>
-    <p><em>"I am the largest, I am the king, my atomic number is a common thing. Seek me out and you shall see, the answer lies within me."</em></p>
-    <label for="riddleAnswer">Enter your answer:</label>
-    <input type="text" id="riddleAnswer">
-    <button id="submitRiddle">Submit</button>
-    <p id="riddleFeedback" style="color: red;"></p>
-  </div>
-
-  <main id="mainContent" style="display: none;">
+  <main id="mainContent">
     <section id="intro">
       <h3>Welcome to Project JOVE (Z11I)</h3>
       <p>This is a top-secret project under General Wealth Co. integrating advanced business intelligence solutions for the cannabis industry.</p>
@@ -102,22 +92,11 @@
   </main>
 
   <footer>
-    <p class="footer-top-secret"><span style="color: red;">Top Secret - NOFORN</span></p>
+    <p class="footer-top-secret"><span>Top Secret - NOFORN</span></p>
     <p hidden>Cryptographic Riddle: Begin at the start of the stars, seek the first three letters, shift them forward by 13 places in the alphabet.</p>
   </footer>
 
   <script>
-    document.getElementById('submitRiddle').addEventListener('click', function () {
-      const answer = document.getElementById('riddleAnswer').value.toLowerCase();
-      const correctAnswer = 'hydrogen';
-      if (answer === correctAnswer) {
-        document.getElementById('mainContent').style.display = 'block';
-        document.getElementById('accessRiddle').style.display = 'none';
-      } else {
-        document.getElementById('riddleFeedback').innerText = 'Incorrect answer. Try again.';
-      }
-    });
-
     // Chart.js financial dashboard
     document.addEventListener('DOMContentLoaded', function () {
       const ctx = document.getElementById('revenueChart').getContext('2d');
@@ -196,7 +175,7 @@
           <h4>Predictive Analytics</h4>
           <p>Projected Sales Growth: 15%</p>
         `;
-      } else } else if (reportType === 'prescriptive') {
+      } else if (reportType === 'prescriptive') {
         reportData = `
           <h3>Prescriptive Report</h3>
           <p>Recommended Actions: Increase marketing spend in Q3</p>
@@ -211,4 +190,4 @@
     });
   </script>
 </body>
-</html> 
+  </html>
