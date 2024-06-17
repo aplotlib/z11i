@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project JOVE - Z11I Business Process Modeling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #1D2F38;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #1D2F38;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 5px solid #00A859;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #00A859;
+            border-bottom: 3px solid #00A859;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #E6EFEF;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: #E6EFEF;
+        }
+
+        a {
+            color: #00A859;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1D2F38;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .responsive-image-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .responsive-image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-secret-banner">Top Secret - NOFORN</div>
+        <h1>Project JOVE - Z11I</h1>
+        <h2>Business Process Modeling</h2>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#current-process">Current Process Flow</a></li>
+                <li><a href="#proposed-model">Proposed Business Model</a></li>
+                <li><a href="#cost-analysis">Cost Analysis</a></li>
+                <li><a href="#business-process-analysis">Business Process Analysis</a></li>
+                <li><a href="#pricing-analysis">Pricing Analysis</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="container">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>This is a hypothetical project under General Wealth Co. integrating advanced business intelligence solutions for the vertically integrated cannabis industry.</p>
+        </section>
+
+        <section id="current-process">
+            <h2>Current Process Flow of Manufacturing Cannabis Edibles</h2>
+            <p>Our hypothetical company currently follows these steps for manufacturing cannabis edibles:</p>
+            <ul>
+                <li>Raw Material Sourcing: Procurement of high-quality cannabis and other ingredients.</li>
+                <li>Quality Check: All raw materials undergo rigorous quality checks.</li>
+                <li>Material Storage: Storage of quality-approved materials.</li>
+                <li>Production Planning: Planning the production schedule and resource allocation.</li>
+                <li>Manufacturing: Actual production of cannabis edibles.</li>
+                <li>Quality Assurance: Quality checks for the finished products.</li>
+                <li>Packaging: Packaging the quality-approved edibles.</li>
+                <li>Storage: Storing the packaged products in a controlled environment.</li>
+                <li>Distribution: Distributing the products to various retail outlets.</li>
+                <li>Retail: The final products are sold to consumers.</li>
+            </ul>
+            <h3>Shortcomings</h3>
+            <ul>
+                <li>Lack of automation in quality checks.</li>
+                <li>Inefficient resource allocation during production planning.</li>
+                <li>Limited storage capacity affecting production scale.</li>
+            </ul>
+            <div class="responsive-image-container">
+                <img src="placeholder.png" alt="Current Process Model" loading="lazy">
+                <figcaption>Current Process Model</figcaption>
+            </div>
+        </section>
+
+        <section id="proposed-model">
+            <h2>Proposed Business Model</h2>
+            <p>To address the shortcomings, a new business prototype is proposed. This prototype aims to revolutionize the manufacturing of cannabis edibles by implementing automation, optimizing resource allocation, and expanding storage capacity.</p>
+            <h3>Advantages</h3>
+            <ul>
+                <li>Automated quality checks to reduce human error.</li>
+                <li>Efficient resource allocation using AI-driven production planning.</li>
+                <li>Expanded storage capacity to scale up production.</li>
+            </ul>
+            <div class="responsive-image-container">
+                <img src="placeholder.png" alt="New Process Model" loading="lazy">
+                <figcaption>New Process Model</figcaption>
+            </div>
+        </section>
+
+        <section id="cost-analysis">
+            <h2>Cost Analysis</h2>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Current Cost ($)</th>
+                    <th>Proposed Cost ($)</th>
+                </tr>
+                <tr>
+                    <td>Raw Material</td>
+                    <td>100,000</td>
+                    <td>90,000</td>
+                </tr>
+                <tr>
+                    <td>Quality Check</td>
+                    <td>20,000</td>
+                    <td>18,000</td>
+                </tr>
+                <tr>
+                    <td>Production</td>
+                    <td>150,000</td>
+                    <td>130,000</td>
+                </tr>
+                <tr>
+                    <td>Packaging</td>
+                    <td>30,000</td>
+                    <td>28,000</td>
+                </tr>
+                <tr>
+                    <td>Distribution</td>
+                    <td>50,000</td>
+                    <td>45,000</td>
+                </tr>
+            </table>
+            <div class="responsive-image-container">
+                <img src="placeholder.png" alt="Cost Savings for Hypothetical Company" loading="lazy">
+                <figcaption>Cost Savings for Hypothetical Company - Power BI Visual</figcaption>
+            </div>
+        </section>
+
+        <section id="business-process-analysis">
+            <h2>Business Process Analysis</h2>
+            <section id="event-simulation-flowchart">
+                <h3>Event Simulation Flowchart</h3>
+                <p>To enhance understanding of the proposed business process, an event simulation flowchart has been designed. This flowchart represents the logic of key events in the cannabis edibles manufacturing process.</p>
+                <div class="responsive-image-container">
+                    <img src="placeholder.png" alt="Event Simulation Flowchart" loading="lazy">
+                    <figcaption>Event Simulation Flowchart</figcaption>
+                </div>
+            </section>
+
+            <section id="sales-strategy-analysis">
+                <h3>Sales Strategy and Analysis</h3>
+                <h4>Sales Strategy</h4>
+                <p>The new business process entails significant changes, including automated quality checks, AI-driven production planning, and expanded storage capacity. These improvements are expected to positively impact the company's sales strategy.</p>
+                <ul>
+                    <li>Enhanced understanding of the proposed business process through an event simulation flowchart.</li>
+                    <li>Improved production cycle efficiency through automation and AI-driven planning.</li>
+                    <li>Increased customer satisfaction due to consistent product quality.</li>
+                </ul>
+                <h4>Sales Analysis and Feasibility</h4>
+                <p>A comprehensive sales analysis was conducted using advanced analytical algorithms and Power BI visualizations to assess the feasibility and success probability of the proposed concepts.</p>
+                <div class="responsive-image-container">
+                    <img src="placeholder.png" alt="Sales Analysis" loading="lazy">
+                    <figcaption>Sales Analysis</figcaption>
+                </div>
+            </section>
+        </section>
+
+        <section id="pricing-analysis">
+            <h2>Pricing Analysis</h2>
+            <section id="causal-loop-diagram-domestic-sales">
+                <h3>Causal Loop Diagram for DOMESTIC Sales</h3>
+                <p>This diagram represents various factors influencing the supply and demand of our hypothetical company's cannabis edibles in the domestic market, including reinforcing and balancing feedback loops.</p>
+                <div class="responsive-image-container">
+                    <img src="placeholder.png" alt="Causal Loop Diagram" loading="lazy">
+                    <figcaption>Causal Loop Diagram for DOMESTIC Sales</figcaption>
+                </div>
+            </section>
+
+            <section id="stock-flow-model-foreign-sales">
+                <h3>Stock and Flow Model for FOREIGN Sales</h3>
+                <p>This model evaluates variables influencing the supply and demand dynamics for our hypothetical company's cannabis edibles in international markets.</p>
+                <div class="responsive-image-container">
+                    <img src="placeholder.png" alt="Stock and Flow Model" loading="lazy">
+                    <figcaption>Stock and Flow Model for FOREIGN Sales</figcaption>
+                </div>
+            </section>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <ul>
+                <li>General Wealth Co. (n.d.). About Us. Retrieved from <a href="https://example.com/about">https://example.com/about</a></li>
+                <li>Reuters. (2023, August 31). Pot firms gain as U.S. move to ease curbs lifts sentiment. Retrieved from <a href="https://www.reuters.com/business/pot-firms-gain-us-move-ease-curbs-lifts-sentiment-2023-08-31/">https://www.reuters.com/business/pot-firms-gain-us-move-ease-curbs-lifts-sentiment-2023-08-31/</a></li>
+                <li>MarketWatch. (n.d.). Hypothetical Company stock falls Friday, underperforms market. Retrieved from <a href="https://www.marketwatch.com/data-news/hypothetical-company-stock-falls-friday-underperforms-market-dc5bb624-2587ec2c8d40">https://www.marketwatch.com/data-news/hypothetical-company-stock-falls-friday-underperforms-market-dc5bb624-2587ec2c8d40</a></li>
+                <li>General Wealth Co. (n.d.). Brands. Retrieved from <a href="https://example.com/brands">https://example.com/brands</a></li>
+                <li>Wana Brands. (n.d.). Home. Retrieved from <a href="https://www.wanabrands.com/">https://www.wanabrands.com/</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 General Wealth Co. All rights reserved.</p>
+    </footer>
+</body>
+</html>
