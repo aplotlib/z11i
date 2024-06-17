@@ -1,52 +1,53 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #1a1a1a;
-  color: #ffcc00;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #000000;
-  padding: 10px 0;
+  background-color: #2e2e2e;
+  padding: 20px;
   text-align: center;
+  position: relative;
 }
 
-.top-secret-banner {
+header .top-secret-banner {
   background-color: #ff0000;
-  color: #000000;
-  font-size: 1.2rem;
-  padding: 10px;
-  margin-bottom: 10px;
+  color: #ffffff;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-h1, h2 {
+header h1, header h2 {
   margin: 0;
+  padding: 5px;
 }
 
-h2 {
-  color: #ffcc00;
-}
-
-nav ul {
+header nav ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 20px 0 0;
   display: flex;
   justify-content: center;
 }
 
-nav ul li {
+header nav ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
-  color: #ffcc00;
+header nav ul li a {
+  color: #f5f5f5;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
   text-decoration: underline;
 }
 
@@ -54,72 +55,61 @@ main {
   padding: 20px;
 }
 
-.widget-grid {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-#revenueChart {
-  max-width: 600px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 10px;
-}
-
-.section h2 {
+main h2 {
   color: #ffcc00;
-  border-bottom: 2px solid #ff0000;
+  border-bottom: 2px solid #ffcc00;
   padding-bottom: 5px;
 }
 
+.widget-grid {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .report-controls {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.report-controls label, .report-controls select, .report-controls button {
+.report-controls label {
   display: block;
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #000000;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-footer {
-  background-color: #000000;
-  color: #ff0000;
-  text-align: center;
+.report-controls select, .report-controls button {
   padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-.footer-top-secret {
-  margin: 0;
-}
-
-#accessRiddle {
-  text-align: center;
-  padding: 20px;
-}
-
-#accessRiddle label, #accessRiddle input, #accessRiddle button {
-  display: block;
-  margin: 10px auto;
-}
-
-#accessRiddle button {
-  background-color: #ff0000;
-  color: #ffffff;
+  margin-right: 10px;
+  border-radius: 5px;
   border: none;
-  padding: 10px 20px;
+  background-color: #3e3e3e;
+  color: #f5f5f5;
+}
+
+.report-controls button {
+  background-color: #ffcc00;
+  color: #000000;
   cursor: pointer;
 }
 
-#accessRiddle button:hover {
-  background-color: #cc0000;
+.report-controls button:hover {
+  background-color: #e6b800;
 }
 
-#riddleFeedback {
-  color: #ff0000;
+#reportOutput {
+  background-color: #2e2e2e;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
+
+footer {
+  background-color: #2e2e2e;
+  padding: 10px;
+  text-align: center;
+}
+
+footer .footer-top-secret {
+  color: #ff0000;
+  font-weight: bold;
+} 
