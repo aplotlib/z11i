@@ -23,7 +23,7 @@
       </ul>
     </nav>
   </header>
-  
+
   <div id="disclaimer">
     <p>Disclaimer: This is a demo site for Project JOVE - Z11I. It is not an actual classified site.</p>
   </div>
@@ -75,6 +75,9 @@
 
     <section id="financial">
       <h2>Financial Analysis</h2>
+      <div class="chart-container">
+        <canvas id="financialAnalysisChart"></canvas>
+      </div>
       <p>Comprehensive financial analysis including revenue, expenses, profit margins, and other key performance indicators (KPIs).</p>
     </section>
 
@@ -93,7 +96,6 @@
 
   <footer>
     <p class="footer-top-secret"><span>Top Secret - NOFORN</span></p>
-    <p hidden>Cryptographic Riddle: Begin at the start of the stars, seek the first three letters, shift them forward by 13 places in the alphabet.</p>
   </footer>
 
   <script>
@@ -132,6 +134,46 @@
               title: {
                 display: true,
                 text: 'Revenue (in USD)'
+              }
+            }
+          }
+        }
+      });
+
+      // Financial Analysis Chart
+      const financialCtx = document.getElementById('financialAnalysisChart').getContext('2d');
+      const financialAnalysisChart = new Chart(financialCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Revenue', 'Expenses', 'Profit'],
+          datasets: [{
+            label: 'Financial Metrics',
+            data: [18000, 7000, 11000],
+            backgroundColor: [
+              'rgba(0, 123, 255, 0.2)',
+              'rgba(255, 0, 0, 0.2)',
+              'rgba(0, 255, 0, 0.2)'
+            ],
+            borderColor: [
+              'rgba(0, 123, 255, 1)',
+              'rgba(255, 0, 0, 1)',
+              'rgba(0, 255, 0, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Metrics'
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Amount (in USD)'
               }
             }
           }
@@ -190,4 +232,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
