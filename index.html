@@ -102,18 +102,21 @@
     <p id="riddleFeedback" style="color: red;"></p>
   </div>
 
-  <script>
-    document.getElementById('submitRiddle').addEventListener('click', function () {
-      const answer = document.getElementById('riddleAnswer').value.toLowerCase();
-      const correctAnswer = 'hydrogen';
-      if (answer === correctAnswer) {
-        document.getElementById('mainContent').style.display = 'block';
-        document.getElementById('accessRiddle').style.display = 'none';
-      } else {
-        document.getElementById('riddleFeedback').innerText = 'Incorrect answer. Try again.';
-      }
-    });
+<script>
+  document.getElementById('submitRiddle').addEventListener('click', function () {
+    const answer = document.getElementById('riddleAnswer').value.toLowerCase();
+    const correctAnswer = 'hydrogen'; // Correct answer should match the riddle
 
+    if (answer === correctAnswer) {
+      document.getElementById('mainContent').style.display = 'block';
+      document.getElementById('accessRiddle').style.display = 'none';
+    } else {
+      document.getElementById('riddleFeedback').innerText = 'Incorrect answer. Try again.';
+    }
+  });
+</script>
+
+  
     // Chart.js financial dashboard
     document.addEventListener('DOMContentLoaded', function () {
       const ctx = document.getElementById('revenueChart').getContext('2d');
