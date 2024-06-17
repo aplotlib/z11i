@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customizable Reports Demo for Project JOVE - Z11I">
+    <title>Customizable Reports Demo - Project JOVE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="reports.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1D2F38;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 5px solid #00A859;
+        }
+
+        .top-secret-banner {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #1D2F38;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #00A859;
+            border-bottom: 2px solid #00A859;
+            padding-bottom: 10px;
+        }
+
+        .report-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .report-controls label,
+        .report-controls select,
+        .report-controls button {
+            margin: 0 10px;
+        }
+
+        #reportOutput {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-secret-banner"><span>Top Secret - For Jupiter's Eyes Only</span></div>
+        <h1>Customizable Reports Demo - Project JOVE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#dashboard">Financial Dashboard</a></li>
+                <li><a href="index.html#reports">Customizable Reports</a></li>
+                <li><a href="index.html#integration">Integration Details</a></li>
+                <li><a href="index.html#analytics">Predictive & Prescriptive Analytics</>
+                                  <li><a href="index.html#financial">Financial Analysis</a></li>
+                <li><a href="index.html#developers">Developers</a></li>
+                <li><a href="index.html#services">Services Offered</a></li>
+                <li><a href="BPMDemo1.html">Business Process Modeling Demo</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section id="customizable-reports">
+            <h2>Customizable Reports Demo</h2>
+            <div class="report-controls">
+                <label for="reportTemplate">Select Report Template:</label>
+                <select id="reportTemplate">
+                    <option value="financial">Financial Report</option>
+                    <option value="operational">Operational Report</option>
+                </select>
+                <button id="customizeReport">Customize Report</button>
+            </div>
+            <div id="reportCustomization" style="display: none;">
+                <h3>Customize Your Report</h3>
+                <label for="fields">Select Fields:</label>
+                <select id="fields" multiple>
+                    <option value="revenue">Revenue</option>
+                    <option value="expenses">Expenses</option>
+                    <option value="profit">Profit</option>
+                    <option value="unitsProduced">Units Produced</option>
+                    <option value="unitsSold">Units Sold</option>
+                </select>
+                <label for="filters">Apply Filters:</label>
+                <input type="text" id="filters" placeholder="e.g., Date Range, Region">
+                <button id="generateCustomReport">Generate Report</button>
+            </div>
+            <div id="reportOutput"></div>
+            <button id="exportPDF" style="display: none;">Export to PDF</button>
+            <button id="exportExcel" style="display: none;">Export to Excel</button>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-top-secret"><span>Top Secret - For Jupiter's Eyes Only</span></p>
+        <p>&copy; 2024 General Wealth Co. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
