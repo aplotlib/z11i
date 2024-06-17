@@ -104,7 +104,7 @@
 
 <script>
   document.getElementById('submitRiddle').addEventListener('click', function () {
-    const answer = document.getElementById('riddleAnswer').value.toLowerCase();
+    const answer = document.getElementById('riddleAnswer').value.toLowerCase(); // Convert input to lowercase
     const correctAnswer = 'hydrogen'; // Correct answer should match the riddle
 
     if (answer === correctAnswer) {
@@ -114,6 +114,7 @@
       document.getElementById('riddleFeedback').innerText = 'Incorrect answer. Try again.';
     }
   });
+    
 
   
     // Chart.js financial dashboard
