@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,31 +90,8 @@
     <p class="footer-top-secret">Top Secret - NOFORN</p>
     <p hidden>Cryptographic Riddle: Begin at the start of the stars, seek the first three letters, shift them forward by 13 places in the alphabet.</p>
   </footer>
-
-  <div id="accessRiddle">
-    <h2>Access Restricted</h2>
-    <p>Solve the riddle to gain access:</p>
-    <p><em>"I am the largest, I am the king, my atomic number is a common thing. Seek me out and you shall see, the answer lies within me."</em></p>
-    <label for="riddleAnswer">Enter your answer:</label>
-    <input type="text" id="riddleAnswer">
-    <button id="submitRiddle">Submit</button>
-    <p id="riddleFeedback" style="color: red;"></p>
-  </div>
-
+  
 <script>
-  document.getElementById('submitRiddle').addEventListener('click', function () {
-    const answer = document.getElementById('riddleAnswer').value.toLowerCase(); // Convert input to lowercase
-    const correctAnswer = 'hydrogen'; // Correct answer should match the riddle
-
-    if (answer === correctAnswer) {
-      document.getElementById('mainContent').style.display = 'block';
-      document.getElementById('accessRiddle').style.display = 'none';
-    } else {
-      document.getElementById('riddleFeedback').innerText = 'Incorrect answer. Try again.';
-    }
-  });
-    
-
   
     // Chart.js financial dashboard
     document.addEventListener('DOMContentLoaded', function () {
