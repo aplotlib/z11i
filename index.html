@@ -1,235 +1,355 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Project JOVE - Z11I: A top-secret business intelligence program for the cannabis industry.">
-  <title>Project JOVE - Z11I</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project JOVE - Z11I: A top-secret business intelligence program for the cannabis industry.">
+    <title>Project JOVE - Z11I</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1D2F38;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 5px solid #00A859;
+        }
+
+        .top-secret-banner {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #1D2F38;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        #disclaimer {
+            background-color: #ffeb3b;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #00A859;
+            border-bottom: 2px solid #00A859;
+            padding-bottom: 10px;
+        }
+
+        .widget-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .report-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .report-controls label,
+        .report-controls select,
+        .report-controls button {
+            margin: 0 10px;
+        }
+
+        .integration-detail {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #1D2F38;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-top-secret {
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <div class="top-secret-banner"><span>Top Secret - For Jupiter's Eyes Only</span></div>
-    <h1>Project JOVE - Z11I</h1>
-    <h2>Business Intelligence Program</h2>
-    <nav>
-    <ul>
-        <li><a href="#dashboard">Financial Dashboard</a></li>
-        <li><a href="#reports">Customizable Reports</a></li>
-        <li><a href="#integration">Integration Details</a></li>
-        <li><a href="#analytics">Predictive & Prescriptive Analytics</a></li>
-        <li><a href="#financial">Financial Analysis</a></li>
-        <li><a href="#developers">Developers</a></li>
-        <li><a href="BPMDemo1.html">Business Process Modeling Demo</a></li>
-        <li><a href="pricing.html">Pricing</a></li> <!-- New link added here -->
-    </ul>
-</nav>
-  </header>
+    <header>
+        <div class="top-secret-banner"><span>Top Secret - For Jupiter's Eyes Only</span></div>
+        <h1>Project JOVE - Z11I</h1>
+        <h2>Business Intelligence Program</h2>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Financial Dashboard</a></li>
+                <li><a href="#reports">Customizable Reports</a></li>
+                <li><a href="#integration">Integration Details</a></li>
+                <li><a href="#analytics">Predictive & Prescriptive Analytics</a></li>
+                <li><a href="#financial">Financial Analysis</a></li>
+                <li><a href="#developers">Developers</a></li>
+                <li><a href="BPMDemo1.html">Business Process Modeling Demo</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div id="disclaimer">
-    <p>Disclaimer: This is a demo site for Project JOVE - Z11I. It is not an actual classified site.</p>
-  </div>
+    <div id="disclaimer">
+        <p>Disclaimer: This is a demo site for Project JOVE - Z11I. It is not an actual classified site.</p>
+    </div>
 
-  <main id="mainContent">
-    <section id="intro">
-      <h3>Welcome to Project JOVE (Z11I)</h3>
-      <p>This is a top-secret project under General Wealth Co. integrating advanced business intelligence solutions for the cannabis industry.</p>
-    </section>
+    <main id="mainContent">
+        <section id="intro">
+            <h3>Welcome to Project JOVE (Z11I)</h3>
+            <p>This is a top-secret project under General Wealth Co. integrating advanced business intelligence solutions for the cannabis industry.</p>
+        </section>
 
-    <section id="dashboard">
-      <h2>Financial Dashboard</h2>
-      <div class="widget-grid">
-        <canvas id="revenueChart" aria-label="Revenue Chart" role="img"></canvas>
-      </div>
-    </section>
+        <section id="dashboard">
+            <h2>Financial Dashboard</h2>
+            <div class="widget-grid">
+                <canvas id="revenueChart" aria-label="Revenue Chart" role="img"></canvas>
+            </div>
+        </section>
 
-    <section id="reports">
-      <h2>Customizable Reports</h2>
-      <div class="report-controls">
-        <label for="reportType">Select Report Type:</label>
-        <select id="reportType">
-          <option value="financial">Financial</option>
-          <option value="operational">Operational</option>
-          <option value="predictive">Predictive</option>
-          <option value="prescriptive">Prescriptive</option>
-        </select>
-        <button id="generateReport">Generate Report</button>
-      </div>
-      <div id="reportOutput"></div>
-    </section>
+        <section id="reports">
+            <h2>Customizable Reports</h2>
+            <div class="report-controls">
+                <label for="reportType">Select Report Type:</label>
+                <select id="reportType">
+                    <option value="financial">Financial</option>
+                    <option value="operational">Operational</option>
+                    <option value="predictive">Predictive</option>
+                    <option value="prescriptive">Prescriptive</option>
+                </select>
+                <button id="generateReport">Generate Report</button>
+            </div>
+            <div id="reportOutput"></div>
+        </section>
 
-    <section id="integration">
-      <h2>Integration Details</h2>
-      <div class="integration-detail">
-        <h3>LeafLink API</h3>
-        <p>Integration with LeafLink API for real-time data synchronization and inventory management.</p>
-      </div>
-      <div class="integration-detail">
-        <h3>Metrc</h3>
-        <p>Integration with Metrc for compliance tracking and reporting.</p>
-      </div>
-    </section>
+        <section id="integration">
+            <h2>Integration Details</h2>
+            <div class="integration-detail">
+                <h3>LeafLink API</h3>
+                <p>Integration with LeafLink API for real-time data synchronization and inventory management.</p>
+            </div>
+            <div class="integration-detail">
+                <h3>Metrc</h3>
+                <p>Integration with Metrc for compliance tracking and reporting.</p>
+            </div>
+        </section>
 
-    <section id="analytics">
-      <h2>Predictive & Prescriptive Analytics</h2>
-      <p>Utilizing advanced algorithms to provide predictive insights and prescriptive recommendations for business operations.</p>
-    </section>
+        <section id="analytics">
+            <h2>Predictive & Prescriptive Analytics</h2>
+            <p>Utilizing advanced algorithms to provide predictive insights and prescriptive recommendations for business operations.</p>
+        </section>
 
-    <section id="financial">
-      <h2>Financial Analysis</h2>
-      <div class="chart-container">
-        <canvas id="financialAnalysisChart" aria-label="Financial Analysis Chart" role="img"></canvas>
-      </div>
-      <p>Comprehensive financial analysis including revenue, expenses, profit margins, and other key performance indicators (KPIs).</p>
-    </section>
+        <section id="financial">
+            <h2>Financial Analysis</h2>
+            <div class="chart-container">
+                <canvas id="financialAnalysisChart" aria-label="Financial Analysis Chart" role="img"></canvas>
+            </div>
+            <p>Comprehensive financial analysis including revenue, expenses, profit margins, and other key performance indicators (KPIs).</p>
+        </section>
 
-    <section id="developers">
-      <h2>Developers</h2>
-      <p>We are seeking developer interns for front-end, back-end, and full-stack opportunities, as well as contract work. Below are the current projects we need help with:</p>
-      <ul>
-        <li>LeafLink API Integration</li>
-        <li>Metrc Compliance Reporting</li>
-        <li>Predictive Analytics Algorithms</li>
-        <li>Customizable Report Generation</li>
-      </ul>
-      <p>Contact us at <a href="mailto:contact@joveintelligence.com">contact@joveintelligence.com</a> for more information.</p>
-    </section>
-  </main>
+        <section id="developers">
+            <h2>Developers</h2>
+            <p>We are seeking developer interns for front-end, back-end, and full-stack opportunities, as well as contract work. Below are the current projects we need help with:</p>
+            <ul>
+                <li>LeafLink API Integration</li>
+                <li>Metrc Compliance Reporting</li>
+                <li>Predictive Analytics Algorithms</li>
+                <li>Customizable Report Generation</li>
+            </ul>
+            <p>Contact us at <a href="mailto:contact@joveintelligence.com">contact@joveintelligence.com</a> for more information.</p>
+        </section>
+    </main>
 
-  <footer>
-    <p class="footer-top-secret"><span>Top Secret - For Jupiter's Eyes Only</span></p>
-  </footer>
+    <footer>
+        <p class="footer-top-secret"><span>Top Secret - For Jupiter's Eyes Only</span></p>
+        <p>&copy; 2024 General Wealth Co. All rights reserved.</p>
+    </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const ctx = document.getElementById('revenueChart').getContext('2d');
-      const revenueChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-          datasets: [{
-            label: 'Revenue',
-            data: [12000, 15000, 8000, 18000, 20000, 22000, 25000, 23000, 24000, 26000, 27000, 30000],
-            backgroundColor: 'rgba(0, 123, 255, 0.2)',
-            borderColor: 'rgba(0, 123, 255, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Projected Revenue',
-            data: [13000, 16000, 9000, 19000, 21000, 23000, 26000, 24000, 25000, 27000, 28000, 31000],
-            backgroundColor: 'rgba(255, 0, 0, 0.2)',
-            borderColor: 'rgba(255, 0, 0, 1)',
-            borderWidth: 1,
-            borderDash: [5, 5]
-          }]
-        },
-        options: {
-          scales: {
-            x: {
-              title: {
-                display: true,
-                text: 'Months'
-              }
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Revenue (in USD)'
-              }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('revenueChart').getContext('2d');
+            const revenueChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    datasets: [{
+                        label: 'Revenue',
+                        data: [12000, 15000, 8000, 18000, 20000, 22000, 25000, 23000, 24000, 26000, 27000, 30000],
+                        backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                        borderColor: 'rgba(0, 123, 255, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Projected Revenue',
+                        data: [13000, 16000, 9000, 19000, 21000, 23000, 26000, 24000, 25000, 27000, 28000, 31000],
+                        backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                        borderColor: 'rgba(255, 0, 0, 1)',
+                        borderWidth: 1,
+                        borderDash: [5, 5]
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Months'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Revenue (in USD)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const financialCtx = document.getElementById('financialAnalysisChart').getContext('2d');
+            const financialAnalysisChart = new Chart(financialCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Revenue', 'Expenses', 'Profit'],
+                    datasets: [{
+                        label: 'Financial Metrics',
+                        data: [18000, 7000, 11000],
+                        backgroundColor: [
+                            'rgba(0, 123, 255, 0.2)',
+                            'rgba(255, 0, 0, 0.2)',
+                            'rgba(0, 255, 0, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 123, 255, 1)',
+                            'rgba(255, 0, 0, 1)',
+                            'rgba(0, 255, 0, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Metrics'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Amount (in USD)'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+        document.getElementById('generateReport').addEventListener('click', function () {
+            const reportType = document.getElementById('reportType').value;
+            let reportData = '';
+
+            if (reportType === 'financial') {
+                reportData = `
+                    <h3>Financial Report</h3>
+                    <p>Revenue: $18,000</p>
+                    <p>Expenses: $7,000</p>
+                    <h4>Statistical Analysis</h4>
+                    <p>Average Monthly Revenue: $13,250</p>
+                    <p>Revenue Standard Deviation: $4,847</p>
+                    <h4>Predictive Analytics</h4>
+                    <p>Projected Revenue Next Quarter: $52,000</p>
+                `;
+            } else if (reportType === 'operational') {
+                reportData = `
+                    <h3>Operational Report</h3>
+                    <p>Units Produced: 1,200</p>
+                    <p>Units Sold: 1,000</p>
+                    <h4>Statistical Analysis</h4>
+                    <p>Production Efficiency: 83.33%</p>
+                    <p>Sales Conversion Rate: 83.33%</p>
+                    <h4>Predictive Analytics</h4>
+                    <p>Projected Units Sold Next Quarter: 3,600</p>
+                `;
+            } else if (reportType === 'predictive') {
+                reportData = `
+                    <h3>Predictive Report</h3>
+                    <p>Future Trends: Increasing demand in Q4</p>
+                    <h4>Statistical Analysis</h4>
+                    <p>Trend Analysis: Positive growth trajectory</p>
+                    <h4>Predictive Analytics</h4>
+                    <p>Projected Sales Growth: 15%</p>
+                `;
+            } else if (reportType === 'prescriptive') {
+                reportData = `
+                    <h3>Prescriptive Report</h3>
+                    <p>Recommended Actions: Increase marketing spend in Q3</p>
+                    <h4>Statistical Analysis</h4>
+                    <p>ROI on Marketing: 10x</p>
+                    <h4>Prescriptive Analytics</h4>
+                    <p>Projected Revenue Increase: $30,000</p>
+                `;
             }
-          }
-        }
-      });
 
-      const financialCtx = document.getElementById('financialAnalysisChart').getContext('2d');
-      const financialAnalysisChart = new Chart(financialCtx, {
-        type: 'bar',
-        data: {
-          labels: ['Revenue', 'Expenses', 'Profit'],
-          datasets: [{
-            label: 'Financial Metrics',
-            data: [18000, 7000, 11000],
-            backgroundColor: [
-              'rgba(0, 123, 255, 0.2)',
-              'rgba(255, 0, 0, 0.2)',
-              'rgba(0, 255, 0, 0.2)'
-            ],
-            borderColor: [
-              'rgba(0, 123, 255, 1)',
-              'rgba(255, 0, 0, 1)',
-              'rgba(0, 255, 0, 1)'
-            ],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            x: {
-              title: {
-                display: true,
-                text: 'Metrics'
-              }
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Amount (in USD)'
-              }
-            }
-          }
-        }
-      });
-    });
-
-    document.getElementById('generateReport').addEventListener('click', function () {
-      const reportType = document.getElementById('reportType').value;
-      let reportData = '';
-
-      if (reportType === 'financial') {
-        reportData = `
-          <h3>Financial Report</h3>
-          <p>Revenue: $18,000</p>
-          <p>Expenses: $7,000</p>
-          <h4>Statistical Analysis</h4>
-          <p>Average Monthly Revenue: $13,250</p>
-          <p>Revenue Standard Deviation: $4,847</p>
-          <h4>Predictive Analytics</h4>
-          <p>Projected Revenue Next Quarter: $52,000</p>
-        `;
-      } else if (reportType === 'operational') {
-        reportData = `
-          <h3>Operational Report</h3>
-          <p>Units Produced: 1,200</p>
-          <p>Units Sold: 1,000</p>
-          <h4>Statistical Analysis</h4>
-          <p>Production Efficiency: 83.33%</p>
-          <p>Sales Conversion Rate: 83.33%</p>
-          <h4>Predictive Analytics</h4>
-          <p>Projected Units Sold Next Quarter: 3,600</p>
-        `;
-      } else if (reportType === 'predictive') {
-        reportData = `
-          <h3>Predictive Report</h3>
-          <p>Future Trends: Increasing demand in Q4</p>
-          <h4>Statistical Analysis</h4>
-          <p>Trend Analysis: Positive growth trajectory</p>
-          <h4>Predictive Analytics</h4>
-          <p>Projected Sales Growth: 15%</p>
-        `;
-      } else if (reportType === 'prescriptive') {
-        reportData = `
-          <h3>Prescriptive Report</h3>
-          <p>Recommended Actions: Increase marketing spend in Q3</p>
-          <h4>Statistical Analysis</h4>
-          <p>ROI on Marketing: 10x</p>
-          <h4>Prescriptive Analytics</h4>
-          <p>Projected Revenue Increase: $30,000</p>
-        `;
-      }
-
-      document.getElementById('reportOutput').innerHTML = reportData;
-    });
-  </script>
+            document.getElementById('reportOutput').innerHTML = reportData;
+        });
+    </script>
 </body>
+
 </html>
