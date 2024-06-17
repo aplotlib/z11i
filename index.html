@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project JOVE - Z11I: A top-secret business intelligence program for the cannabis industry.">
   <title>Project JOVE - Z11I</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 </head>
 <body>
   <header>
@@ -20,7 +21,8 @@
         <li><a href="#analytics">Predictive & Prescriptive Analytics</a></li>
         <li><a href="#financial">Financial Analysis</a></li>
         <li><a href="#developers">Developers</a></li>
-<li><a href="BPMDemo1.html">Business Process Modeling Demo</a></li>      </ul>
+        <li><a href="BPMDemo1.html">Business Process Modeling Demo</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -37,7 +39,7 @@
     <section id="dashboard">
       <h2>Financial Dashboard</h2>
       <div class="widget-grid">
-        <canvas id="revenueChart"></canvas>
+        <canvas id="revenueChart" aria-label="Revenue Chart" role="img"></canvas>
       </div>
     </section>
 
@@ -76,7 +78,7 @@
     <section id="financial">
       <h2>Financial Analysis</h2>
       <div class="chart-container">
-        <canvas id="financialAnalysisChart"></canvas>
+        <canvas id="financialAnalysisChart" aria-label="Financial Analysis Chart" role="img"></canvas>
       </div>
       <p>Comprehensive financial analysis including revenue, expenses, profit margins, and other key performance indicators (KPIs).</p>
     </section>
@@ -99,7 +101,6 @@
   </footer>
 
   <script>
-    // Chart.js financial dashboard
     document.addEventListener('DOMContentLoaded', function () {
       const ctx = document.getElementById('revenueChart').getContext('2d');
       const revenueChart = new Chart(ctx, {
@@ -140,7 +141,6 @@
         }
       });
 
-      // Financial Analysis Chart
       const financialCtx = document.getElementById('financialAnalysisChart').getContext('2d');
       const financialAnalysisChart = new Chart(financialCtx, {
         type: 'bar',
@@ -181,7 +181,6 @@
       });
     });
 
-    // Simple customizable reports demo
     document.getElementById('generateReport').addEventListener('click', function () {
       const reportType = document.getElementById('reportType').value;
       let reportData = '';
